@@ -1,0 +1,24 @@
+{
+  "name": "music.tannernielsen.com",
+  "private": true,
+  "scripts": {
+    "build:clean": "rimraf docs/*.html docs/*.js docs/*.css",
+    "build:compile": "parcel build src/index.html --public-url ./ --out-dir docs --no-source-maps",
+    "build:add": "git add docs",
+    "build": "yarn build:clean && yarn build:compile && yarn build:add",
+    "dev": "rimraf dev && parcel src/index.html --out-dir dev"
+  },
+  "dependencies": {
+    "bloomer": "^0.6.5",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0"
+  },
+  "devDependencies": {
+    "husky": "^3.1.0",
+    "parcel-bundler": "^1.12.4",
+    "rimraf": "^3.0.0",
+    "typescript": "^3.7.4"
+  },
+  "repository": "https://github.com/tannerntannern/music.git",
+  "author": "Tanner Nielsen"
+}
